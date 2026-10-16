@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>Happy Birthday, Mummy 🌹 | With Love, Favour</title>
+<style>
+:root{--gold:#d8b56a;--gold2:#f4df9c;--ink:#090909;--muted:#d5cbb8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#241b0d 0%,#0a0908 48%,#050505 100%);color:#fffaf0;font-family:Georgia,"Times New Roman",serif;line-height:1.72}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(920px,100%);margin:auto;padding:0 20px}
+.hero{min-height:94svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:60px 0}
+.hero:before,.hero:after{content:"✦";position:absolute;color:#d8b56a55;font-size:2rem;animation:float 5s ease-in-out infinite}
+.hero:before{top:15%;left:12%}.hero:after{right:12%;bottom:17%;animation-delay:1s}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font:600 .7rem Arial,sans-serif}
+h1{font-size:clamp(2.8rem,11vw,5.8rem);line-height:1.05;margin:22px 0;color:var(--gold2);font-weight:400}
+.gold{color:var(--gold)}
+.subtitle{max-width:600px;margin:0 auto 28px;color:#e7dfd0;font-size:1.08rem}
+.btn{border:1px solid var(--gold);background:linear-gradient(135deg,#e5c878,#a98032);color:#171006;border-radius:999px;padding:13px 22px;font:700 .88rem Arial,sans-serif;box-shadow:0 8px 30px #d8b56a22}
+.btn.secondary{background:transparent;color:var(--gold2);box-shadow:none}
+.music-note{display:block;color:#c9bda5;font:.78rem Arial,sans-serif;margin-top:13px}
+section{padding:68px 0}
+.section-label{text-align:center;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font:600 .7rem Arial,sans-serif}
+h2{text-align:center;font-size:clamp(2rem,7vw,3.2rem);font-weight:400;line-height:1.15;margin:12px 0 18px}
+.intro{text-align:center;color:var(--muted);max-width:610px;margin:0 auto 30px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.memory{min-height:215px;border:1px solid #d8b56a55;border-radius:15px;overflow:hidden;background:#17130d;position:relative}
+.memory img{width:100%;height:100%;min-height:215px;object-fit:cover;display:block;position:absolute;inset:0}
+.memory .caption{position:absolute;bottom:0;left:0;right:0;padding:40px 13px 12px;background:linear-gradient(transparent,#000e);font-size:.94rem}
+.memory.wide{grid-column:1/-1;min-height:250px}.memory.wide img{min-height:250px}
+.placeholder{display:grid;place-items:center;min-height:215px;color:#e0c575;text-align:center;padding:20px;background:linear-gradient(145deg,#30230e,#0d0b08)}
+.placeholder span{font-size:2rem;display:block}
+.letter{max-width:760px;margin:auto;border:1px solid #d8b56a66;background:linear-gradient(135deg,#19150e,#0e0d0b);padding:clamp(22px,5vw,45px);border-radius:18px;box-shadow:0 18px 60px #0008}
+.letter p{color:#eee3cd;font-size:1.02rem;margin:0 0 18px}
+.signature{font-style:italic;color:var(--gold2)!important;font-size:1.2rem!important;margin-top:28px!important}
+.surprise{max-width:650px;margin:auto;text-align:center;padding:30px 20px;border-radius:18px;border:1px solid #d8b56a45;background:#100e0b}
+.hidden-message{display:none;margin:24px auto 0;animation:fade .9s ease;max-width:520px}
+.hidden-message.show{display:block}
+.big-heart{font-size:3rem;color:var(--gold);animation:pulse 1.3s infinite}
+footer{text-align:center;padding:35px 20px 50px;color:#b4a88e;font-size:.85rem}
+hr{border:0;border-top:1px solid #d8b56a30;margin:0}
+@keyframes float{50%{transform:translateY(-14px) rotate(15deg)}}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{50%{transform:scale(1.13)}}
+@media(min-width:650px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.memory.wide{grid-column:span 2}.memory,.memory img{min-height:285px}.memory.wide,.memory.wide img{min-height:285px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Made with all my heart, just for you</div>
+    <h1>Happy Birthday,<br><span class="gold">My Mummy 🌹</span></h1>
+    <p class="subtitle">My heart, my safe place, my forever cheerleader, and one of the biggest blessings of my life. Today, this little corner of the internet is all yours. ❤️</p>
+    <button class="btn" onclick="document.querySelector('#memories').scrollIntoView({behavior:'smooth'})">Open your birthday surprise ✨</button>
+    <span class="music-note">When you're ready, tap below to play a song for you.</span>
+    <div style="margin-top:16px"><button class="btn secondary" id="musicButton" onclick="toggleMusic()">♫ Play your birthday song</button></div>
+    <audio id="bgMusic" loop preload="none"><source src="music.mp3" type="audio/mpeg"></audio>
+  </div>
+</header>
+<hr>
+<main>
+<section id="memories">
+  <div class="wrap">
+    <div class="section-label">Every memory is a blessing</div>
+    <h2>My favourite memories <span class="gold">with you</span></h2>
+    <p class="intro">Mummy, these spaces are for the beautiful moments you want to keep close. Add your favourite pictures together and make this page even more personal.</p>
+    <div class="gallery">
+      <article class="memory wide">
+        <img src="photo1.jpg" alt="A treasured memory with Mummy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="placeholder" style="display:none"><div><span>♡</span>Add a favourite photo<br><small>photo1.jpg</small></div></div>
+        <div class="caption">My Mummy, my blessing ❤️</div>
+      </article>
+      <article class="memory">
+        <img src="photo2.jpg" alt="A happy memory with Mummy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="placeholder" style="display:none"><div><span>✦</span>Add a favourite photo<br><small>photo2.jpg</small></div></div>
+        <div class="caption">Your smile means so much</div>
+      </article>
+      <article class="memory">
+        <img src="photo3.jpg" alt="Another treasured memory with Mummy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="placeholder" style="display:none"><div><span>♡</span>Add a favourite photo<br><small>photo3.jpg</small></div></div>
+        <div class="caption">More beautiful days together</div>
+      </article>
+    </div>
+  </div>
+</section>
+<hr>
+<section id="letter">
+  <div class="wrap">
+    <div class="section-label">From your daughter's heart</div>
+    <h2>A letter for <span class="gold">my Mummy</span></h2>
+    <div class="letter">
+      <p><strong>Happy Birthday to my Mummy, my heart, my safe place, and one of the biggest blessings of my life. ❤️🥹🎂🌹</strong></p>
+      <p>Mummy, honestly, I don’t even know where to start because sometimes I feel like no amount of words can truly explain how much you mean to me. Today is your special day, and all I can think about is how blessed I am to have you as my mother. If there is one thing I will never take for granted in this life, it is your love, your support, your prayers, and all the sacrifices you have made for me. ❤️</p>
+      <p>Mummy, thank you for loving me the way you do. Thank you for always wanting the best for me, for praying for me even when I may not know it, for supporting me, encouraging me, and believing in me. Thank you for the things you do quietly, the sacrifices you make without complaining, and the love you give me without expecting anything in return. I may not always know how to express my gratitude, but please know that I see you, I appreciate you, and I carry your love in my heart every single day. 🥹❤️</p>
+      <p>Sometimes, I wish I could let you see yourself through my eyes, just so you would understand how special you are to me. You are more than just my mother; you are my biggest supporter, my cheerleader, my comfort, and one of the people whose happiness means the world to me. There is something so special about being your daughter, about knowing that I have a mother whose love and prayers I can always cherish. No matter how old I become, I will always be your girl, your baby, and someone who will forever need and appreciate her Mummy. 🫂❤️</p>
+      <p>Mummy, I pray that God blesses you in ways that will leave you speechless. May He reward you for every sacrifice, answer every prayer in your heart, and give you all the beautiful things you have wished for. May you enjoy the fruits of your labour, live long in good health, and experience so much happiness that all your worries become distant memories. May God continue to protect you, strengthen you, uplift you, and surround you with the same love you have always shown me.</p>
+      <p>One of my biggest prayers is that I get to see you enjoy life, smile genuinely, achieve your dreams, and experience beautiful things. I pray that I will have many more years to celebrate you, make you proud, give you reasons to smile, and show you just how much you mean to me. I want to be able to give you beautiful memories, make life easier for you, and love you in all the ways you deserve to be loved. You have done so much for me, Mummy, and I pray that life gives me the opportunity to give back to you in ways that make your heart happy. ❤️🙏🏽</p>
+      <p>Thank you for being my mother. Thank you for being my Mummy. Thank you for every prayer, every sacrifice, every act of kindness, and every moment you have shown me love. I do not take you for granted, and I pray that God never allows me to lose sight of the blessing I have in you.</p>
+      <p>Happy birthday, my beautiful Mummy. 🥹❤️🎂🌹 May this new age bring you peace, joy, divine favour, answered prayers, and blessings beyond your imagination. May you never know sorrow that overwhelms you, and may your heart always have reasons to be happy. May God preserve you for me because I still have so much love to give you, so many memories to make with you, and so many more birthdays I want us to celebrate together.</p>
+      <p>I love you so much, Mummy. More than I say, more than I show, and more than these words could ever explain. If I had the chance to choose a mother, I would still pray for someone like you. Being your daughter is a blessing I will forever be grateful for.</p>
+      <p>Happy birthday, my Mummy, my forever cheerleader, my answered prayer, and my precious gift from God. May your days be long, your smile never fade, and your happiness never run dry. I love you endlessly, Mum’s girl forever. ❤️🥹🫂🎉</p>
+      <p class="signature">With all my love, always,<br>Favour ❤️🌹</p>
+    </div>
+  </div>
+</section>
+<hr>
+<section id="surprise">
+  <div class="wrap">
+    <div class="section-label">A little wish for your new year</div>
+    <h2>One last <span class="gold">surprise</span></h2>
+    <div class="surprise">
+      <div class="big-heart">♡</div>
+      <p>Mummy, there's one more message from my heart. Are you ready?</p>
+      <button class="btn" onclick="revealSurprise()">Open your final message ✨</button>
+      <div class="hidden-message" id="hiddenMessage">
+        <h2 class="gold">My prayer for you, Mummy</h2>
+        <p>May God preserve you for many more birthdays. May your secret prayers become beautiful testimonies, may your heart be at peace, and may life give back to you the love and goodness you have poured into others.</p>
+        <p>May I have many more years to celebrate you, make you proud, care for you, and remind you how deeply you are loved.</p>
+        <p><strong>Happy birthday, my Mummy. I love you endlessly. ❤️🌹</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Made with love by Favour, especially for Mummy. <span class="gold">✦</span></footer>
+<script>
+const music = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
+async function toggleMusic(){
+  if(music.paused){
+    try{await music.play();musicButton.textContent="Ⅱ Pause the music";}
+    catch(e){alert("To play music, add an audio file named music.mp3 to the same website folder, then try again.");}
+  }else{music.pause();musicButton.textContent="♫ Play your birthday song";}
+}
+function revealSurprise(){
+  document.getElementById("hiddenMessage").classList.add("show");
+  confetti();
+}
+function confetti(){
+  const colors=["#f4df9c","#d8b56a","#fff3c4","#ffffff","#a98032"];
+  for(let i=0;i<100;i++){
+    const piece=document.createElement("span");
+    piece.textContent=Math.random()>.5?"✦":"•";
+    piece.style.cssText=`position:fixed;z-index:9999;top:-20px;left:${Math.random()*100}vw;color:${colors[Math.floor(Math.random()*colors.length)]};font-size:${12+Math.random()*15}px;pointer-events:none;`;
+    document.body.appendChild(piece);
+    const drift=(Math.random()-.5)*180;
+    const duration=1800+Math.random()*2200;
+    const animation=piece.animate([
+      {transform:"translate(0,0) rotate(0deg)",opacity:1},
+      {transform:`translate(${drift}px,${window.innerHeight+60}px) rotate(${Math.random()*720}deg)`,opacity:0.1}
+    ],{duration,easing:"ease-out"});
+    animation.onfinish=()=>piece.remove();
+  }
+}
+</script>
+</body>
+</html>
